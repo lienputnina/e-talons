@@ -2,18 +2,19 @@
 #define E_Talons_h
 
 #include <string>
+using namespace std;
 
 class E_Talons {
 
 protected:
-  int serial;
+  int serial; // should it be a string?
 
 public:
   E_Talons(int serial);
 
-  void Print();       // needs implementaion - should it be virtual?
-  virtual void Use(); // what does it mean - "empty"?
-  virtual void Add(); // what does it mean - "empty"?
+  virtual void Print() const = 0; // should this return 0?
+  virtual string Use();
+  virtual int Add();
 };
 
 #endif
