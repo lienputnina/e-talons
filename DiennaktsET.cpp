@@ -5,11 +5,14 @@
 #include <iostream>
 #include <sstream>
 
-DiennaktsET::DiennaktsET(int diennaktsETSerialNumber, bool diennaktsETActivated)
-    : E_Talons(diennaktsETSerialNumber) {
-  serial = diennaktsETSerialNumber > 0 ? diennaktsETSerialNumber : 12345;
-  activated = diennaktsETActivated;
-  diennaktsETActivated = false;
+using namespace std;
+
+DiennaktsET::DiennaktsET(int diennaktsSerialNumber, bool diennaktsActivated,
+                         string diennakts_activation_date)
+    : E_Talons(diennaktsSerialNumber) {
+  serial = diennaktsSerialNumber > 0 ? diennaktsSerialNumber : 12345;
+  activated = diennaktsActivated;
+  activation_date = diennakts_activation_date;
 };
 
 string DiennaktsET::Use() {
@@ -90,9 +93,14 @@ string DiennaktsET::Use() {
                         .count();
 
     if (duration <= 24) {
-      std::cout << "zaļš" << std::endl;
+      cout << "Zaļš: "
+           << "e-talons is available for usage." << endl;
+      cout << "\n";
+
     } else {
-      std::cout << "sarkans" << std::endl;
+      cout << "Sarkans:"
+           << "e-talons cannot be used." << endl;
+      cout << "\n";
     }
   }
 
@@ -104,6 +112,6 @@ void DiennaktsET::Print() const {
 
   cout << "Diennakts E-talons data: " << endl;
   cout << "Serial number: " << serial << endl;
-  cout << "State " << activated << endl;
+  cout << "State: " << activationState << endl;
   cout << "Activation date: " << activation_date << endl;
 }

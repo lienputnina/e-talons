@@ -2,6 +2,7 @@
 #define E_Talons_h
 
 #include <string>
+using namespace std;
 
 class E_Talons {
 
@@ -14,16 +15,17 @@ public:
    derived classes
   */
   E_Talons(int serial);
+  virtual ~E_Talons(){};
 
   // Completely virtual function to make the whole class an abstract class
   virtual void Print() const = 0;
 
   /*
-  Declaring only function prototypes because they will be redefined in derived
-  classes
+  Declaring Use() and Add() with empty implementations to align with the
+  requirements
   */
-  virtual std::string Use();
-  virtual int Add();
+  virtual string Use() { return 0; };
+  virtual int Add() { return 0; };
 };
 
 #endif
