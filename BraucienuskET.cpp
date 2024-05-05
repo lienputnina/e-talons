@@ -7,16 +7,25 @@ BraucienuskET::BraucienuskET(int braucienuskSerialNumber, int tripsLeft)
   trips = tripsLeft >= 0 ? tripsLeft : 0;
 };
 
-std::string BraucienuskET::Use() {
+string BraucienuskET::Use() {
+  string braucienuskSate;
   if (trips > 0) {
-    return "zaļš";
+    cout << "Zaļš: "
+         << "You have some braucieni left." << endl;
+    cout << "\n";
   } else {
-    return "sarkans";
-  }
+    cout << "Sarkans: "
+         << "No braucieni left. Get more braucieni." << endl;
+    cout << "\n";
+  };
+
+  --trips;
+
+  return braucienuskSate;
 };
 
 void BraucienuskET::Print() const {
-  std::cout << "Braucienusk E-talons data: " << std::endl;
-  std::cout << "Serial number: " << serial << std::endl;
-  std::cout << "Trips left: " << trips << std::endl;
+  cout << "Braucienusk E-talons data: " << endl;
+  cout << "Serial number: " << serial << endl;
+  cout << "Trips left: " << trips << endl;
 };

@@ -1,11 +1,12 @@
+#include "BraucienuskET.h"
 #include "DiennaktsET.h"
 
 int main() {
 
-  DiennaktsET TwentyFour(4444, false, "03.05.2024");
+  BraucienuskET MyRides(12357, 5);
 
-  TwentyFour.Use();
-  TwentyFour.Print();
+  MyRides.Use();
+  MyRides.Print();
 
   return 0;
 }

@@ -4,6 +4,8 @@
 #include "E_Talons.h"
 #include <string>
 
+using namespace std;
+
 class BraucienuskET : public E_Talons {
 
 private:
@@ -18,7 +20,7 @@ public:
   2. Adding "override" to signify that the base class implementation will be
   overriden/overwritten in the derived class
   */
-  virtual std::string Use() override;
+  virtual string Use() override;
   virtual void Print() const override;
 };
 
