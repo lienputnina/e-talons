@@ -15,8 +15,14 @@ private:
 public:
   DiennaktsET(int serial, bool activated);
 
-  virtual string Use();
-  virtual void Print() const;
+  /*
+  1. Adding "virtual" to method signature for clarity  and also to show that
+  these methods were virtual in the base class
+  2. Adding "override" to signify that the base class implementation will be
+  overriden/overwritten in the derived class
+  */
+  virtual string Use() override;
+  virtual void Print() const override;
 };
 
 #endif
