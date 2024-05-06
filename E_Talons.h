@@ -7,25 +7,29 @@ using namespace std;
 class E_Talons {
 
 protected:
-  int serial; // should it be a string? See, if 5 digits can be enforced somehow
+  // Declaring serial as uint (unsigned int) to prevent negative numbers.
+  uint serial;
 
 public:
   /*
-   Constructor is not virtual so it could be used in creating objects for the
-   derived classes
+  Declaring constructor as non-virtual, so it could be implemented and called in
+  derived classes.
   */
   E_Talons(int serial);
   virtual ~E_Talons(){};
 
-  // Completely virtual function to make the whole class an abstract class
+  /*
+  Declaring Print() and Use() as pure virtual methods to force their
+  implementation in all derived classes.
+  */
   virtual void Print() const = 0;
+  virtual void Use() = 0;
 
   /*
-  Declaring Use() and Add() with empty implementations to align with the
-  requirements
+  Providing a default implementation for Add() to avoid forcing it's
+  implementation in all derived classes.
   */
-  virtual string Use() { return 0; };
-  virtual int Add() { return 0; };
+  virtual void Add(){};
 };
 
 #endif
