@@ -21,11 +21,15 @@ string BraucienuskET::Use() {
 
   --trips;
 
+  cout << "You have " << trips << " braucieni left." << endl;
+  cout << "\n";
+
   return braucienuskSate;
 };
 
 void BraucienuskET::Print() const {
-  cout << "Braucienusk E-talons data: " << endl;
+  cout << "Braucienusk E-talons:" << endl;
   cout << "Serial number: " << serial << endl;
   cout << "Trips left: " << trips << endl;
+  cout << "\n";
 };

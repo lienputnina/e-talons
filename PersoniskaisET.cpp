@@ -24,7 +24,6 @@ string PersoniskaisET::Use() {
 
   --trips;
 
-  // TODO - add same logic to Diennakts and Braucienusk
   cout << "You have " << trips << " braucieni left." << endl;
   cout << "\n";
 
@@ -37,10 +36,9 @@ int PersoniskaisET::Add(int extraTrips) {
 };
 
 void PersoniskaisET::Print() const {
-  cout << "Personiskais E-talons data: " << endl;
+  cout << "Personiskais E-talons:" << endl;
   cout << "Serial number: " << serial << endl;
   cout << "Trips left: " << trips << endl;
-  cout << "Owner: " << endl;
   cout << "Name: " << name << endl;
   cout << "Surname: " << surname << endl;
   cout << "\n";

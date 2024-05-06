@@ -94,12 +94,12 @@ string DiennaktsET::Use() {
 
     if (duration <= 24) {
       cout << "Zaļš: "
-           << "e-talons is available for usage." << endl;
+           << "E-talons is available for usage." << endl;
       cout << "\n";
 
     } else {
       cout << "Sarkans:"
-           << "e-talons cannot be used." << endl;
+           << "E-talons cannot be used." << endl;
       cout << "\n";
     }
   }
@@ -110,8 +110,9 @@ string DiennaktsET::Use() {
 void DiennaktsET::Print() const {
   string activationState = activated ? "activated" : "Not activated";
 
-  cout << "Diennakts E-talons data: " << endl;
+  cout << "Diennakts E-talons:" << endl;
   cout << "Serial number: " << serial << endl;
   cout << "State: " << activationState << endl;
   cout << "Activation date: " << activation_date << endl;
+  cout << "\n";
 }
