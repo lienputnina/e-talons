@@ -94,12 +94,12 @@ string DiennaktsET::Use() {
 
     if (duration <= 24) {
       cout << "Zaļš: "
-           << "E-talons is available for usage." << endl;
+           << "Diennakts E-talons is available for usage." << endl;
       cout << "\n";
 
     } else {
-      cout << "Sarkans:"
-           << "E-talons cannot be used." << endl;
+      cout << "Sarkans: "
+           << "Diennakts E-talons cannot be used." << endl;
       cout << "\n";
     }
   }

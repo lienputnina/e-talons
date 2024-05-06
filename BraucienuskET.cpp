@@ -10,19 +10,13 @@ BraucienuskET::BraucienuskET(int braucienuskSerialNumber, int tripsLeft)
 string BraucienuskET::Use() {
   string braucienuskSate;
   if (trips > 0) {
-    cout << "Zaļš: "
-         << "You have some braucieni left." << endl;
-    cout << "\n";
+    cout << "Zaļš.More braucieni left." << endl;
   } else {
     cout << "Sarkans: "
          << "No braucieni left. Get more braucieni." << endl;
-    cout << "\n";
   };
 
   --trips;
-
-  cout << "You have " << trips << " braucieni left." << endl;
-  cout << "\n";
 
   return braucienuskSate;
 };
