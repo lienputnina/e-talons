@@ -28,9 +28,9 @@ void PersoniskaisET::Add(int extraTrips) { trips += extraTrips; };
 
 void PersoniskaisET::Print() const {
   cout << "Personiskais E-talons:" << endl;
-  cout << "Serial number: " << serial << endl;
-  cout << "Trips left: " << trips << endl;
   cout << "Name: " << name << endl;
   cout << "Surname: " << surname << endl;
+  cout << "Serial number: " << serial << endl;
+  cout << "Trips left: " << trips << endl;
   cout << "\n";
 };
