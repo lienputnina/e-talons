@@ -2,7 +2,7 @@
 #include <iostream>
 
 BraucienuskET::BraucienuskET(uint braucienuskSerialNumber, uint tripsLeft)
-    : E_Talons(braucienuskSerialNumber) {
+    : ETalons(braucienuskSerialNumber) {
   serial = braucienuskSerialNumber;
   trips = tripsLeft;
 };

@@ -1,7 +1,7 @@
 
 #include "BraucienuskET.h"
 #include "DiennaktsET.h"
-#include "E_Talons.h"
+#include "ETalons.h"
 #include "PersoniskaisET.h"
 #include <iostream>
 
@@ -17,8 +17,7 @@ int main() {
   PersoniskaisET MyOwn(5555, 2, "Froddo", "Baggins");
   PersoniskaisET MyPrecious(6666, 3, "Samwise", "Gamgee");
 
-  // TODO choose one casing in all project please
-  E_Talons *arrayOfETaloni[6];
+  ETalons *arrayOfETaloni[6];
   arrayOfETaloni[0] = &TwentyFourHours1;
   arrayOfETaloni[1] = &TwentyFourHours2;
   arrayOfETaloni[2] = &MyRides;

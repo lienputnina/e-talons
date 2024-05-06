@@ -4,7 +4,7 @@
 PersoniskaisET::PersoniskaisET(uint personiskaisSerialNumber,
                                uint personiskaisTrips, string personiskaisName,
                                string personiskaisSurname)
-    : E_Talons(personiskaisSerialNumber) {
+    : ETalons(personiskaisSerialNumber) {
   serial = personiskaisSerialNumber;
   trips = personiskaisTrips;
   name = personiskaisName.empty() ? "Jane" : personiskaisName;

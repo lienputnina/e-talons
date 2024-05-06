@@ -1,12 +1,12 @@
 #ifndef BraucienuskET_h
 #define BraucienuskET_h
 
-#include "E_Talons.h"
+#include "ETalons.h"
 #include <string>
 
 using namespace std;
 
-class BraucienuskET : public E_Talons {
+class BraucienuskET : public ETalons {
 
 private:
   // Declaring trips as uint (unsigned int) to prevent negative numbers.

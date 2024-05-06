@@ -1,12 +1,12 @@
 #ifndef PersoniskaisET_h
 #define PersoniskaisET_h
 
-#include "E_Talons.h"
+#include "ETalons.h"
 #include <string>
 
 using namespace std;
 
-class PersoniskaisET : public E_Talons {
+class PersoniskaisET : public ETalons {
 
 private:
   // Declaring trips as uint (unsigned int) to prevent negative numbers.
