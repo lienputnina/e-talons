@@ -8,9 +8,8 @@
 using namespace std;
 
 int main() {
-
-  DiennaktsET TwentyFourHours(1111, true, "04.05.2024");
-  DiennaktsET Diurnal(2222, false, "01.01.1970");
+  DiennaktsET TwentyFourHours1(1111, true, "04.05.2024");
+  DiennaktsET TwentyFourHours2(2222, false, "01.01.1970");
 
   BraucienuskET MyRides(3333, 10);
   BraucienuskET AllMyRides(4444, 1);
@@ -18,28 +17,29 @@ int main() {
   PersoniskaisET MyOwn(5555, 2, "Froddo", "Baggins");
   PersoniskaisET MyPrecious(6666, 3, "Samwise", "Gamgee");
 
-  E_Talons *arrayOfE_Taloni[6];
-  arrayOfE_Taloni[0] = &TwentyFourHours;
-  arrayOfE_Taloni[1] = &Diurnal;
-  arrayOfE_Taloni[2] = &MyRides;
-  arrayOfE_Taloni[3] = &AllMyRides;
-  arrayOfE_Taloni[4] = &MyOwn;
-  arrayOfE_Taloni[5] = &MyPrecious;
+  // TODO choose one casing in all project please
+  E_Talons *arrayOfETaloni[6];
+  arrayOfETaloni[0] = &TwentyFourHours1;
+  arrayOfETaloni[1] = &TwentyFourHours2;
+  arrayOfETaloni[2] = &MyRides;
+  arrayOfETaloni[3] = &AllMyRides;
+  arrayOfETaloni[4] = &MyOwn;
+  arrayOfETaloni[5] = &MyPrecious;
 
   cout << "Printing data for all E-Taloni" << endl;
   cout << "\n";
 
   for (int i = 0; i < 6; i++) {
-    arrayOfE_Taloni[i]->Print();
+    arrayOfETaloni[i]->Print();
   };
 
   cout << "Testing Diennakts E-Taloni:" << endl;
 
-  TwentyFourHours.Use();
-  TwentyFourHours.Print();
+  TwentyFourHours1.Use();
+  TwentyFourHours1.Print();
 
-  Diurnal.Use();
-  Diurnal.Print();
+  TwentyFourHours2.Use();
+  TwentyFourHours2.Print();
 
   cout << "Testing Braucienusk E-Taloni:" << endl;
 
@@ -54,7 +54,7 @@ int main() {
   AllMyRides.Print();
 
   cout << "Testing Personiskais E-Taloni:" << endl;
-  cout << "Frodo Using MyOwn" << endl;
+  cout << "Frodo Using MyOwn." << endl;
   MyOwn.Use();
   MyOwn.Use();
   MyOwn.Use();
@@ -64,7 +64,7 @@ int main() {
   MyOwn.Add(10);
   MyOwn.Print();
 
-  cout << "Sam Using MyPrecious" << endl;
+  cout << "Sam Using MyPrecious." << endl;
   MyPrecious.Use();
   MyPrecious.Use();
   MyPrecious.Use();
