@@ -9,12 +9,14 @@ using namespace std;
 class PersoniskaisET : public E_Talons {
 
 private:
-  int trips;
+  // Declaring trips as uint (unsigned int) to prevent negative numbers.
+  uint trips;
+
   string name;
   string surname;
 
 public:
-  PersoniskaisET(int serial, int trips, string name, string surname);
+  PersoniskaisET(uint serial, uint trips, string name, string surname);
 
   /*
   1. Adding "virtual" to method signature for clarity and also to show that
@@ -22,8 +24,8 @@ public:
   2. Adding "override" to signify that the base class implementation will be
   overriden/overwritten in the derived class
   */
-  virtual string Use() override;
-  virtual int Add(int extraTrips);
+  virtual void Use() override;
+  virtual void Add(int extraTrips);
   virtual void Print() const override;
 };
 

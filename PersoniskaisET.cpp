@@ -1,19 +1,20 @@
 #include "PersoniskaisET.h"
 #include <iostream>
 
-PersoniskaisET::PersoniskaisET(int personiskaisSerialNumber,
-                               int personiskaisTrips, string personiskaisName,
+PersoniskaisET::PersoniskaisET(uint personiskaisSerialNumber,
+                               uint personiskaisTrips, string personiskaisName,
                                string personiskaisSurname)
     : E_Talons(personiskaisSerialNumber) {
-  serial = personiskaisSerialNumber > 0 ? personiskaisSerialNumber : 12345;
-  trips = personiskaisTrips >= 0 ? personiskaisTrips : 0;
+  serial = personiskaisSerialNumber;
+  trips = personiskaisTrips;
   name = personiskaisName.empty() ? "Jane" : personiskaisName;
   surname = personiskaisSurname.empty() ? "Doe" : personiskaisSurname;
 };
 
-string PersoniskaisET::Use() {
+void PersoniskaisET::Use() {
   string personiskaisSate;
   if (trips > 0) {
+    --trips;
     cout << "Zaļš. More braucieni left." << endl;
     cout << "\n";
   } else {
@@ -21,16 +22,9 @@ string PersoniskaisET::Use() {
          << "No braucieni left. Get more braucieni." << endl;
     cout << "\n";
   };
-
-  --trips;
-
-  return personiskaisSate;
 };
 
-int PersoniskaisET::Add(int extraTrips) {
-  trips += extraTrips;
-  return extraTrips;
-};
+void PersoniskaisET::Add(int extraTrips) { trips += extraTrips; };
 
 void PersoniskaisET::Print() const {
   cout << "Personiskais E-talons:" << endl;
