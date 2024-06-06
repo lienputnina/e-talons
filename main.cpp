@@ -29,7 +29,8 @@ int main() {
   cout << "\n";
 
   for (int i = 0; i < 6; i++) {
-    arrayOfETaloni[i]->Print();
+    arrayOfETaloni[i]
+        ->Print(); // Pointer, because cannot access method directly
   };
 
   cout << "Testing Diennakts E-Taloni." << endl;

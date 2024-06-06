@@ -16,11 +16,18 @@ public:
   derived classes.
   */
   ETalons(int serial);
+
+  /*
+  Destructor has to be virtual, so that derived classes would call their own
+  destructors, not the destructor of the base class. Especially important, if
+  the base destructor has 'delete' command.
+  */
   virtual ~ETalons(){};
 
   /*
   Declaring Print() and Use() as pure virtual methods to force their
   implementation in all derived classes.
+  Pure virtual methods: function body is equal to 0;
   */
   virtual void Print() const = 0;
   virtual void Use() = 0;

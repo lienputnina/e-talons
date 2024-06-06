@@ -8,7 +8,6 @@ BraucienuskET::BraucienuskET(uint braucienuskSerialNumber, uint tripsLeft)
 };
 
 void BraucienuskET::Use() {
-  string braucienuskSate;
   if (trips > 0) {
     cout << "Zaļš. More braucieni left." << endl;
     cout << "\n";

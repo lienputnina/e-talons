@@ -12,7 +12,6 @@ PersoniskaisET::PersoniskaisET(uint personiskaisSerialNumber,
 };
 
 void PersoniskaisET::Use() {
-  string personiskaisSate;
   if (trips > 0) {
     --trips;
     cout << "Zaļš. More braucieni left." << endl;
